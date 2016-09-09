@@ -1,3 +1,31 @@
-.content {
+.aside {
+  width: 200px;
   background-color: #CAE1FF;
+  padding: 10px;
+  margin: 10px;
+  border: 5px solid #9ED2FF;
+  float: left;
+}
+
+.content {
+  width: 695px;
+  height: auto;
+  background-color: #CAE1FF;
+  padding: 10px;
+  margin: 10px;
+  border: 5px solid #9ED2FF;
+}
+#allposts{
+  float: left;
+}
+.aboutme {
+  width: 200px;
+  background-color: #CAE1FF;
+  padding: 10px;
+  margin: 10px;
+  border: 5px solid #9ED2FF;
+  float: left;
+}
+html{
+   background: radial-gradient(circle, #9ED2FF,#CAE1FF,white);
 }
