@@ -5,6 +5,8 @@
   margin: 10px;
   border: 5px solid #9ED2FF;
   float: left;
+  border-radius: 20px;
+  box-shadow: 7px 7px 5px #888888;
 }
 
 .content {
@@ -14,6 +16,8 @@
   padding: 10px;
   margin: 10px;
   border: 5px solid #9ED2FF;
+  border-radius: 20px;
+  box-shadow: 7px 7px 5px #888888;
 }
 #allposts{
   float: left;
@@ -25,6 +29,8 @@
   margin: 10px;
   border: 5px solid #9ED2FF;
   float: left;
+  border-radius: 20px;
+  box-shadow: 7px 7px 5px #888888;
 }
 html{
    background: radial-gradient(circle, #9ED2FF,#CAE1FF,white);
