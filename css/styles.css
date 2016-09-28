@@ -7,6 +7,8 @@
   float: left;
   border-radius: 20px;
   box-shadow: 7px 7px 5px #888888;
+  display: block;
+  height: 500px;
 }
 
 .content {
@@ -19,11 +21,16 @@
   border-radius: 20px;
   box-shadow: 7px 7px 5px #888888;
 }
+.container {
+  height: 100%;
+  display: flex;
+}
 #allposts{
   float: left;
 }
 .aboutme {
   width: 200px;
+  height: 500px;
   background-color: #CAE1FF;
   padding: 10px;
   margin: 10px;
@@ -31,7 +38,14 @@
   float: left;
   border-radius: 20px;
   box-shadow: 7px 7px 5px #888888;
+  display: block;
 }
 html{
    background: radial-gradient(circle, #9ED2FF,#CAE1FF,white);
 }
+/*footer {
+   display: flex;
+}
+#copyright{
+  align-self: auto | flex-start | flex-end | center ;
+}*/
