@@ -1,5 +1,5 @@
 .aside {
-  width: 200px;
+  width: 20%;
   background-color: #CAE1FF;
   padding: 10px;
   margin: 10px;
@@ -7,8 +7,7 @@
   float: left;
   border-radius: 20px;
   box-shadow: 7px 7px 5px #888888;
-  display: block;
-  height: 500px;
+  height: 250px;
 }
 
 .content {
@@ -29,8 +28,8 @@
   float: left;
 }
 .aboutme {
-  width: 200px;
-  height: 500px;
+  width: 20%;
+  height: 330px;
   background-color: #CAE1FF;
   padding: 10px;
   margin: 10px;
