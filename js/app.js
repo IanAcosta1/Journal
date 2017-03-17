@@ -1,33 +1,6 @@
 console.log("k");
-var bodyData = [{
-  "header": "h1"
-},
-{
-  "div" : {
-    "class" : "container",
-    ["allposts"]
-  }
-}
-];
 
-var firstEntry = [{
-  "div" : [{"id":"allposts"}],
-  {
-    "div" : [{"id": "first", "class" : "content"}],
-    {
-      "h2": [],
-      {
-        "b" : []
-      }
-    }
-  }
-}];
-
-
-
-
-
-var something = [
+var journals = [
   {
     "journalEntry" : "1",
     "date" : "August 15, 2016",
@@ -45,7 +18,7 @@ var something = [
       "When it comes to UI (User Interface), everything is more focused on the visual side of the product. A good UI would be organized and it should be easy to identify it's parts. Everything is based on aesthetics.",
       "On the other hand, UX (User Experience) would be more on the usability of the product. A good UX should allow the user to easily use and navigate around the product."
     ],
-    "img" : undefined;
+    "img" : undefined
   },
   {
     "journalEntry" : "3",
@@ -104,3 +77,29 @@ var something = [
     "img" :undefined
   },
 ];
+
+/*
+  Create a function named showAll
+  Pass one parameter (data)
+
+  Inside the function
+  Iterate through data
+    for each object create elements
+    create parent div
+      with the id "entry-" + object.id
+    create a h2 header(b)
+      append(attach) inner.HTML object.title to h2
+    create h6 header(i) for date
+    append(attach) inner.HTML object.date to h6
+    create div with class "article"
+      create a parapagraph 
+    
+*/
+
+function showAll(data){
+  for (var i = 0; i < data.length; i++) {
+    var entry = document.createElement("div");
+  }
+}
+//append after putting in all the data
+showAll(journals);
