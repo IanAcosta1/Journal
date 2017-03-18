@@ -138,7 +138,9 @@ showAll(journals);
 
 
 function loadNav(data){
+  //creates nav element
   var nav = document.createElement("nav");
+  //creates ul element
   nav.appendChild(document.createElement("ul"));
   for (var i = 0; i < data.length; i++) {
     var li = document.createElement("li");
@@ -148,6 +150,7 @@ function loadNav(data){
     li.appendChild(link);
     nav.appendChild(li);
   }
+  //loads ecerything onto the page
   document.getElementById("aside").appendChild(nav);
 }
 loadNav(journals);
