@@ -6,7 +6,7 @@
   border: 5px solid #9ED2FF;
   border-radius: 20px;
   box-shadow: 7px 7px 5px #888888;
-  height: 400px;
+  height: auto;
 }
 
 .content {
@@ -33,7 +33,7 @@
 }
 .aboutme {
   width: 15%;
-  height: 330px;
+  height: auto;
   background-color: #CAE1FF;
   padding: 10px;
   margin: 10px;
