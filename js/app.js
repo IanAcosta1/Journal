@@ -4,7 +4,7 @@ var journals = [
   {
     "journalEntry" : "1",
     "date" : "August 15, 2016",
-    "title" : "Why I took this class",
+    "title" : "My First Entry",
     "content" : [
       "I took this class because I want to be a software engineer when I grow up. In addition, when I was introduced to this class, I decided that I might as well give it a go to see how it will turn out.",
       "I hope to learn some basic coding skills for languages like HTML and Java. I feel that it will make it easier for me to understand other languages in the future."],
@@ -87,19 +87,67 @@ var journals = [
     for each object create elements
     create parent div
       with the id "entry-" + object.id
+
     create a h2 header(b)
       append(attach) inner.HTML object.title to h2
+
     create h6 header(i) for date
     append(attach) inner.HTML object.date to h6
+
     create div with class "article"
       create a parapagraph 
     
 */
 
 function showAll(data){
+
   for (var i = 0; i < data.length; i++) {
+    //makes div
     var entry = document.createElement("div");
+    entry.className = "content";
+    entry.id = "entry-"+data[i].journalEntry;
+
+    //adds title
+    var titles = document.createElement("h2");
+    titles.innerHTML = "<b>"+data[i].title+"</b";
+    entry.appendChild(titles);
+
+    //adds date
+    var publishDate = document.createElement("h6");
+    publishDate.innerHTML = "<i>"+data[i].date+"</i>";
+    entry.appendChild(publishDate);
+
+    //adds text
+    var articleDiv = document.createElement("div");
+    articleDiv.className="article";
+    for (var t = 0; t < data[i].content.length; t++) {
+      var text = document.createElement("p");
+      text.innerHTML = data[i].content[t];
+      articleDiv.appendChild(text);
+    }
+    entry.append(articleDiv);
+
+    //finally adds everything to the page
+    document.getElementById("allposts").appendChild(entry);
+
   }
 }
 //append after putting in all the data
 showAll(journals);
+
+
+
+function loadNav(data){
+  var nav = document.createElement("nav");
+  nav.appendChild(document.createElement("ul"));
+  for (var i = 0; i < data.length; i++) {
+    var li = document.createElement("li");
+    var link = document.createElement("a");
+    link.setAttribute("href", "#"+"entry-"+data[i].journalEntry);
+    link.innerHTML=data[i].title;
+    li.appendChild(link);
+    nav.appendChild(li);
+  }
+  document.getElementById("aside").appendChild(nav);
+}
+loadNav(journals);
