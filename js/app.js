@@ -171,20 +171,20 @@ function enlarge(id){
   link.style.transition = "all 0.5s";
   link.style.backgroundColor = "#555";
   link.style.color = "white";
-  link.style.width = "200px";
+  link.style.width = "87%";
 }
 function shrink(id){
   var link = document.getElementById(id);
   link.style.transition = "all 0.5s";
   link.style.backgroundColor = "#f1f1f1";
   link.style.color = "black";
-  link.style.width = "185px";
+  link.style.width = "75%";
 }
 
 function navBar(){
   bar = document.getElementById("holder");
-  if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
-    bar.style.margin = (document.body.scrollTop-130) + "px 0px 0px 0px";
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    bar.style.margin = (document.body.scrollTop-80) + "px 0px 0px 0px";
   } 
   else {
 
