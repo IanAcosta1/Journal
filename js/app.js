@@ -186,7 +186,7 @@ function navBar(){
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     bar.style.margin = (document.body.scrollTop-80) + "px 0px 0px 0px";
   } 
-  else {
-
+  else if (document.body.scrollTop ==0 || document.documentElement.scrollTop ==0){
+    bar.style.margin = "10px 0px 0px 0px";
   }
 }
