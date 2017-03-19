@@ -184,11 +184,9 @@ function shrink(id){
 function navBar(){
   bar = document.getElementById("holder");
   if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
-        holder.style.position = "fixed";
-        holder.style.top = "0px";
+    bar.style.margin = (document.body.scrollTop-130) + "px 0px 0px 0px";
   } 
   else {
-        holder.style.position = "absolute";
-        holder.style.top = "";
+
   }
 }
