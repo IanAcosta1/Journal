@@ -186,8 +186,9 @@ function navBar(){
   if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
         holder.style.position = "fixed";
         holder.style.top = "0px";
-    } else {
+  } 
+  else {
         holder.style.position = "absolute";
         holder.style.top = "";
-    }
+  }
 }
