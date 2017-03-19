@@ -66,14 +66,21 @@ var journals = [
     "journalEntry":"9",
     "date": "November 21, 2016",
     "title" : "VAC Review",
-    "content" : ["The problem we tried to solve was the lack of communication between students, clubs, teachers, and their school. Often times students would join clubs or they're new to a class and they're afraid to ask questions infront of people. Sometimes they won't have time to stay a little after the meeting/class is done to ask questions and they need a convient way to communicate with the club officer/ class teacher.","The app solves it by allowing students to chat with teachers/club officers. This app can automatically send reminders to club members. Also it allows students to give feedback to teachers about the class.","We would imrpove our video by using better equipement. Better mics would make the dialogue clearer and easier to understand and using a tripod would make the video more stable. We can also make the video longer if we had more time to film.","Our current features include group chats betweens clubs, students and teachers. It also provides online bulletin, lunch menus, etc. Students can give feed back to teachers and address school problems.","I would like to add a feature that shows what lunch lines are still open and how much more plates they have. Another feature that I'd like to have is having a built in planner that reminds you about assignments that the teacher gives.","Some of the challenges we faced was when we tried to think of how we were going to do our video. It was hard to film clips of how the app would work if we didn't actually have the app.","I think we should communicate with eachother more outside of class because a lot of times we were on different pages. We can also meet up more outside of class so we can film more."],
+    "content" : ["The problem we tried to solve was the lack of communication between students, clubs, teachers, and their school. Often times students would join clubs or they're new to a class and they're afraid to ask questions infront of people. Sometimes they won't have time to stay a little after the meeting/class is done to ask questions and they need a convient way to communicate with the club officer/ class teacher.",
+    "The app solves it by allowing students to chat with teachers/club officers. This app can automatically send reminders to club members. Also it allows students to give feedback to teachers about the class.",
+    "We would imrpove our video by using better equipement. Better mics would make the dialogue clearer and easier to understand and using a tripod would make the video more stable. We can also make the video longer if we had more time to film.",
+    "Our current features include group chats betweens clubs, students and teachers. It also provides online bulletin, lunch menus, etc. Students can give feed back to teachers and address school problems.",
+    "I would like to add a feature that shows what lunch lines are still open and how much more plates they have. Another feature that I'd like to have is having a built in planner that reminds you about assignments that the teacher gives.",
+    "Some of the challenges we faced was when we tried to think of how we were going to do our video. It was hard to film clips of how the app would work if we didn't actually have the app.",
+    "I think we should communicate with eachother more outside of class because a lot of times we were on different pages. We can also meet up more outside of class so we can film more."],
     "img" :undefined
   },
   {
     "journalEntry":"10",
     "date": "December 19, 2016",
     "title" : "Semester Reflection",
-    "content" : ["To start off, we learned how to use github. It is an online website that allows users to upload and share their projects for eveyone to see. We were taught how to use one of their applications called GitShell. It's a command prompt that allows us to create and nagivate through files.From there, we were taught HTML. We got to make our own website from scratch. Then we were showed how to to design our HTML website with a language called CSS. In addition, we were taught a programming langaage called JavaScript. It's a programming language that works more with functionality rather than appearance.","One of my favorite things that we learned was JavaScript. Since I did have expereience with a simillar language, I found it easy to learn JavaScript. I liked how everything about the language is logic based. The language that I hated the most was CSS. It was as fustrating as how my teachers described it to be. Just when you think you got the code right, you end up messing up your website."],
+    "content" : ["To start off, we learned how to use github. It is an online website that allows users to upload and share their projects for eveyone to see. We were taught how to use one of their applications called GitShell. It's a command prompt that allows us to create and nagivate through files.From there, we were taught HTML. We got to make our own website from scratch. Then we were showed how to to design our HTML website with a language called CSS. In addition, we were taught a programming langaage called JavaScript. It's a programming language that works more with functionality rather than appearance.",
+    "One of my favorite things that we learned was JavaScript. Since I did have expereience with a simillar language, I found it easy to learn JavaScript. I liked how everything about the language is logic based. The language that I hated the most was CSS. It was as fustrating as how my teachers described it to be. Just when you think you got the code right, you end up messing up your website."],
     "img" :undefined
   },
 ];
@@ -139,18 +146,48 @@ showAll(journals);
 
 function loadNav(data){
   //creates nav element
-  var nav = document.createElement("nav");
   //creates ul element
-  nav.appendChild(document.createElement("ul"));
+  var ul = document.createElement("ul");
+  ul.id = "navBar";
   for (var i = 0; i < data.length; i++) {
     var li = document.createElement("li");
     var link = document.createElement("a");
     link.setAttribute("href", "#"+"entry-"+data[i].journalEntry);
+    link.setAttribute("onmouseover", "enlarge(this.id)");
+    link.setAttribute("onmouseout", "shrink(this.id)");
+    link.id=i+1;
     link.innerHTML=data[i].title;
     li.appendChild(link);
-    nav.appendChild(li);
+    ul.appendChild(li);
   }
   //loads ecerything onto the page
-  document.getElementById("aside").appendChild(nav);
+  document.getElementById("holder").appendChild(ul);
 }
 loadNav(journals);
+
+function enlarge(id){
+  console.log("work");
+  var link = document.getElementById(id);
+  link.style.transition = "all 0.5s";
+  link.style.backgroundColor = "#555";
+  link.style.color = "white";
+  link.style.width = "200px";
+}
+function shrink(id){
+  var link = document.getElementById(id);
+  link.style.transition = "all 0.5s";
+  link.style.backgroundColor = "#f1f1f1";
+  link.style.color = "black";
+  link.style.width = "185px";
+}
+
+function navBar(){
+  bar = document.getElementById("holder");
+  if (document.body.scrollTop > 130 || document.documentElement.scrollTop > 130) {
+        holder.style.position = "fixed";
+        holder.style.top = "0px";
+    } else {
+        holder.style.position = "absolute";
+        holder.style.top = "";
+    }
+}

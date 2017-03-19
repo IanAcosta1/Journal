@@ -1,50 +1,96 @@
 #aside {
-  width: 15%;
-  background-color: #CAE1FF;
-  padding: 10px;
-  margin: 10px;
-  border: 5px solid #9ED2FF;
-  border-radius: 20px;
-  box-shadow: 7px 7px 5px #888888;
+  width: 23%;
   height: auto;
+  margin: 10px;
 }
-
 .content {
   height: auto;
-  background-color: #CAE1FF;
+  background-color: #f1f1f1;
   padding: 10px;
-  margin: 10px;
-  border: 5px solid #9ED2FF;
-  border-radius: 20px;
-  box-shadow: 7px 7px 5px #888888;
+  margin: 20px 10px;
 }
-.container {
+#container{
   height: auto;
+  width: 1200px;
+   margin: auto;
+   max-width:1200px;
+}
+header{
+  padding: 10px;
+  background-color: black;
+  color: white;
+  height: 100px;
+}
+#blog {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content:center;
   align-items: flex-start;
+  background-color: white;
 }
 #allposts{
-  width: 50%;
+  width: 67%;
   display: inline-block;
-  margin: 0px 7px;
+  margin: 10px;
 }
 .aboutme {
-  width: 15%;
+  width: 25%;
   height: auto;
-  background-color: #CAE1FF;
-  padding: 10px;
-  margin: 10px;
-  border: 5px solid #9ED2FF;
-  border-radius: 20px;
-  box-shadow: 7px 7px 5px #888888;
   display: inline-block;
+  margin: 10px;
+}
+#inside{
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+#inside img{
+  width: 100%;
+  height: auto;
 }
 body{
-  width: 100%;
+  background-color:#1f1f1f;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    width: 185px;
+}
+
+/* Change the link color on hover 
+li a:hover {
+    background-color: #555;
+    color: white;
+    width: 90%;
+}
+*/
+
 html{
-   background: radial-gradient(circle, #9ED2FF,#CAE1FF,white);
+  font-family: 'Open Sans', sans-serif;
+}
+
+p{
+  font-weight: lighter;
+  line-height: 30px;
+}
+h5 {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  width: 212px;
+}
+
+.aboutme h5{
+  width: 250px;
+}
+.content, #holder h5, #holder a,.aboutme h5,#inside{
+  box-shadow: 5px 5px 10px #999999;
 }

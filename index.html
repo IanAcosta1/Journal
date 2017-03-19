@@ -4,23 +4,33 @@
     <meta charset="utf-8">
     <title> Ian's Journal</title>
     <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
-  <body>
-    <header>
-      <h1 align = "center"><b>Ian Acosta's Journal</b></h1>
-      <hr></hr>      
-    </header>
-    <div class = "container">
-      <div id = "aside">
-        <h5>BLOG</h5>
-      </div>
-      <div id="allposts">
-      </div>
-      <div class="aboutme">
-        <h5>ABOUT ME</h5>
-        <img src="http://s3.favim.com/orig/42/anime-anime-boy-bad-black-dark-Favim.com-351593.jpg" height="200" width="200">
-        <p>My name is Ian</p>
-         <p>I'm not emo</p>
+  <body onscroll="navBar()">
+    <div id = "container">
+      <header>
+      <h1>Ian Acosta's Blog</h1>
+      </header>
+      <div id = "blog">
+
+        <div id = "aside">
+          <div id = "holder">
+            <h5>Blog Entries</h5>
+          </div>
+        </div>
+
+        <div id="allposts">
+        </div>
+
+        <div class="aboutme">
+          <h5>ABOUT ME</h5>
+          <div id = "inside">
+            <img src="http://s3.favim.com/orig/42/anime-anime-boy-bad-black-dark-Favim.com-351593.jpg" height="200" width="200">
+            <p>My name is Ian</p>
+            <p>I'm not emo</p>
+          </div>
+        </div>
+
       </div>
     </div>      
   </body>
