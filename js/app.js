@@ -1,5 +1,3 @@
-console.log("k");
-
 var journals = [
   {
     "journalEntry" : "1",
@@ -85,27 +83,6 @@ var journals = [
   },
 ];
 
-/*
-  Create a function named showAll
-  Pass one parameter (data)
-
-  Inside the function
-  Iterate through data
-    for each object create elements
-    create parent div
-      with the id "entry-" + object.id
-
-    create a h2 header(b)
-      append(attach) inner.HTML object.title to h2
-
-    create h6 header(i) for date
-    append(attach) inner.HTML object.date to h6
-
-    create div with class "article"
-      create a parapagraph 
-    
-*/
-
 function showAll(data){
 
   for (var i = 0; i < data.length; i++) {
@@ -145,7 +122,6 @@ showAll(journals);
 
 
 function loadNav(data){
-  //creates nav element
   //creates ul element
   var ul = document.createElement("ul");
   ul.id = "navBar";
@@ -180,11 +156,10 @@ function shrink(id){
   link.style.color = "black";
   link.style.width = "75%";
 }
-
 function navBar(){
-  bar = document.getElementById("holder");
+    bar = document.getElementById("holder");
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    bar.style.margin = (document.body.scrollTop-80) + "px 0px 0px 0px";
+    bar.style.margin = (document.documentElement.scrollTop-80) + "px 0px 0px 0px";
   } 
   else if (document.body.scrollTop ==0 || document.documentElement.scrollTop ==0){
     bar.style.margin = "10px 0px 0px 0px";

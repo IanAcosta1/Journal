@@ -28,7 +28,7 @@
   display: inline-block;
   margin: 10px;
 }
-.aboutme {
+#aboutme {
   width: 20%;
   height: auto;
   display: inline-block;
@@ -59,19 +59,9 @@ li a {
     background-color: #f1f1f1;
     width: 75%;
 }
-
-/* Change the link color on hover 
-li a:hover {
-    background-color: #555;
-    color: white;
-    width: 90%;
-}
-*/
-
 html{
   font-family: 'Open Sans', sans-serif;
 }
-
 p{
   font-weight: lighter;
   line-height: 30px;
@@ -82,7 +72,7 @@ h5 {
   padding: 10px;
   width: auto;
 }
-.content, #holder h5, #holder a,.aboutme h5,#inside{
+.content, #holder h5, #holder a,#aboutme h5,#inside{
   box-shadow: 0px 5px 10px #999999;
 }
 h1{
@@ -94,9 +84,6 @@ header{
   color: white;
   height: 70px;
 }
-
-
-
 @media screen and (min-width: 850px){
   #moreBut{
    display: inline-block;
@@ -105,7 +92,7 @@ header{
   header{
     text-align: left;
   }
-  .aboutme{
+  #aboutme{
     visibility: visible;
     width: 20%;
   }
@@ -113,15 +100,11 @@ header{
     width: 59%;
   }
 }
-
-
 @media screen and (max-width: 1200px){
   #container{
     width: 100%;
   }
 }
-
-
 @media screen and (max-width: 849px){
   #moreBut{
    display: inline-block;
@@ -130,7 +113,7 @@ header{
   header{
     text-align: center;
   }
-  .aboutme{
+  #aboutme{
     visibility: hidden;
     width: 0px;
   }
